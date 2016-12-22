@@ -1,0 +1,6 @@
+C:\Users\obliv\Documents\NetBeansProjects\ChatApplication\src>java ChatClient localhost 8888
+Establishing connection. Please wait...
+Closing connection...
+Exception in thread "main" java.lang.NullPointerException
+        at ChatClient.<init>(ChatClient.java:42)
+        at ChatClient.main(ChatClient.java:54)
