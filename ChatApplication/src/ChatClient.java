@@ -39,7 +39,7 @@ public class ChatClient
         }
         catch(UnknownHostException event) {}
         catch(IOException event){}
-        finally{ System.out.println("Closing connection..."); socket.close() ;}   // Error here :(
+        finally{ System.out.println("Closing connection..."); socket.close() ;} 
     }
     /**
      * 
@@ -51,6 +51,6 @@ public class ChatClient
         ChatClient client;
         if(args.length != 2) { System.out.println("Usage: java ChatClient ChatServer port"); }
         
-        else{ String serverName = args[0]; int port = Integer.parseInt(args[1]); client = new ChatClient(serverName, port); } //Error here :(
+        else{ String serverName = args[0]; int port = Integer.parseInt(args[1]); client = new ChatClient(serverName, port); }
     }
 }
