@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Assignment: Chat Applications
  * Date: 22nd December 2016
  * @author Kieran Ryan: eeu444
- * @author Dainel Jones: eeu---
+ * @author Daniel Jones: eeu6b7
  */
 public class ChatClient 
 {
