@@ -32,20 +32,24 @@ public class ChatServer2
             System.out.println("Server started" + server);
             System.out.println("Waiting for connection...");
             while(true){
-                socket = server.accept();
-                System.out.println("Socket created: " + socket);
-                System.out.println("Connected to client...");
-                //Takes input from client
-                Scanner in = new Scanner(socket.getInputStream());
-                //Until the client enters ".bye", server will continue running
-                boolean done = false;
-                while(!done)
+                try
                 {
-                    String line = in.nextLine();
-                    System.out.println(line);
-                    done = line.equals(".bye");
+                     socket = server.accept();
+                    System.out.println("Socket created: " + socket);
+                    System.out.println("Connected to client...");
+                    //Takes input from client
+                    Scanner in = new Scanner(socket.getInputStream());
+                    //Until the client enters ".bye", server will continue running
+                    boolean done = false;
+                    while(!done)
+                    {
+                        String line = in.nextLine();
+                        System.out.println(line);
+                        done = line.equals(".bye");
+                    }
+                    System.out.println("Client dropped.");
                 }
-                System.out.println("Client dropped.");
+                catch(IOException event) { System.out.println(event); }
             }
         }
         catch(IOException event) { System.out.println(event); }
