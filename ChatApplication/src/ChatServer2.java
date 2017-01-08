@@ -31,10 +31,11 @@ public class ChatServer2
             server = new ServerSocket(port);
             System.out.println("Server started" + server);
             System.out.println("Waiting for connection...");
-            while(true){
+            while(true)
+            {
                 try
                 {
-                     socket = server.accept();
+                    socket = server.accept();
                     System.out.println("Socket created: " + socket);
                     System.out.println("Connected to client...");
                     //Takes input from client
@@ -48,9 +49,9 @@ public class ChatServer2
                         done = line.equals(".bye");
                     }
                     System.out.println("Client dropped.");
-                }
-                catch(IOException event) { System.out.println(event); }
-            }
+                }catch(IOException event) { System.out.println(event); }
+                
+            } 
         }
         catch(IOException event) { System.out.println(event); }
         
