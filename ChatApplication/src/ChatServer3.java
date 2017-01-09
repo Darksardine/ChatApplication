@@ -57,22 +57,6 @@ public class ChatServer3 implements Runnable
                     client.start();
                 }
                 catch(IOException event) {}
-                /*Scanner in = new Scanner(socket.getInputStream());
-                boolean done = false;
-                while(!done)
-                {
-                    try
-                    {
-                        String line = in.nextLine();
-                        System.out.println(line);
-                        done = line.equals(".bye");
-                    }
-                    finally {done = true;}
-                }
-                if(socket != null)
-                    socket.close();
-                in.close();
-                System.out.println("Client dropped.");*/
             }
             catch(IOException event) { System.out.println(event); }
         }
