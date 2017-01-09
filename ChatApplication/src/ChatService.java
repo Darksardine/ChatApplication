@@ -3,16 +3,13 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Assignment: Chat Applications
+ * Date: 22nd December 2016
+ * @author Kieran Ryan: eeu444
+ * @author Daniel Jones: eeu6b7
  */
 
-/**
- *
- * @author obliv
- */
 public class ChatService extends Thread
 {
     private Socket socket;
